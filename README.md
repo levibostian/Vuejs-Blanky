@@ -2,6 +2,17 @@
 
 Opinionated boilerplate for Vuejs projects. 
 
+# What's included?
+
+* Typescript
+* Babel
+* Jest
+* Pug for HTML
+* SASS for CSS
+* eslint
+* Prettier
+* Travis-CI for tests, builds, and deployment
+
 # Getting started 
 
 * `npm install`

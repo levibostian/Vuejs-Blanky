@@ -1,3 +1,13 @@
 module.exports = {
-  lintOnSave: false
+  lintOnSave: false,
+  configureWebpack: {
+    module: {
+      rules: [
+        {
+          test: /\.pug$/,
+          loader: "pug-plain-loader"
+        }
+      ]
+    }
+  }
 };
