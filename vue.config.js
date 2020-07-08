@@ -4,7 +4,9 @@ module.exports = {
   pluginOptions: {
     'style-resources-loader': {
       preProcessor: 'scss',
-      patterns: ['/Users/levibostian/code/Vuejs-Blanky/src/styles/_global.scss']
+      patterns: [
+        path.resolve(__dirname, './src/styles/_global.scss')
+      ]
     }
   },
   configureWebpack: {
