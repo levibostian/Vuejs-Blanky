@@ -1,6 +1,6 @@
 <template lang="pug">
-  .hello
-    h1 {{ msg }}
+  .hello.red
+    h1.red {{ msg }}
     p
       | For a guide and recipes on how to configure / customize this project,
       br

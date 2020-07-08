@@ -1,5 +1,12 @@
+const path = require("path");
+
 module.exports = {
-  lintOnSave: false,
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'scss',
+      patterns: ['/Users/levibostian/code/Vuejs-Blanky/src/styles/_global.scss']
+    }
+  },
   configureWebpack: {
     module: {
       rules: [
