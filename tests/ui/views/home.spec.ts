@@ -69,7 +69,6 @@ describe("Home.vue", () => {
     repoControllerMock.getRepos.mockResolvedValueOnce(repos)
     const homeWrapper = new HomeWrapper(mount(Home))
 
-    homeWrapper.refreshButton.trigger("click")
     expect(homeWrapper.loadingImg.isVisible()).toBe(true)
   })
 })
