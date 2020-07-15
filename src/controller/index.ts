@@ -1,1 +1,1 @@
-export * from "./github_controller"
+export * from "./repo_controller"

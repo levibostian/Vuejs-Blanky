@@ -11,9 +11,7 @@ module.exports = {
     "^@/(.*)$": "<rootDir>/src/$1"
   },
   snapshotSerializers: ["jest-serializer-vue"],
-  testMatch: [
-    "**/tests/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)",
-  ],
+  testMatch: ["**/tests/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)"],
   testURL: "http://localhost/",
-  resetMocks: true 
-};
+  resetMocks: true
+}
