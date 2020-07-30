@@ -1,6 +1,6 @@
 <template lang="pug">
-  div(id="Repos")
-    .br3.pa3.mv3(v-for="(repo, i) in repos" :key="repo.id" :style="{'background-color':rainbow(i)}")
+  #id="Repos"
+    .br3.pa3.mv3(v-for="(repo, index) in repos" :key="repo.id" :style="{'background-color':getRainbowColor(index)}")
       RepoItem(:repo="repo")
 </template>
 
@@ -18,8 +18,10 @@ import { Component, Vue } from "vue-property-decorator"
   }
 })
 export default class Repos extends Vue {
-  rainbow(i: number): string {
-    return "hsl(" + (360 * i) / this.$props.repos.length + ",80%,60%)"
+  getRainbowColor(seed: number): string {
+    const colorHue: number = (360 * seed) / this.$props.repos.length
+
+    return `hsl(${colorHue}, 80%, 60%)`
   }
 }
 </script>

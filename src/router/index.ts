@@ -1,6 +1,7 @@
 import Vue from "vue"
 import VueRouter, { RouteConfig } from "vue-router"
 import Home from "../views/Home.vue"
+import { Env } from "@/env"
 
 Vue.use(VueRouter)
 
@@ -22,8 +23,7 @@ const routes: Array<RouteConfig> = [
 
 const router = new VueRouter({
   mode: "history",
-  // eslint-disable-next-line no-process-env
-  base: process.env.BASE_URL,
+  base: Env.baseUrl,
   routes
 })
 

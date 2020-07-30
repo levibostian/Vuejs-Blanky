@@ -1,15 +1,18 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+/* eslint-disable */
+
+/**
+ * This file is given to us from Vuejs. We want to leave it alone so we are disabling eslint so it stays untouched. 
+ */
 import Vue, { VNode } from "vue"
 
 declare global {
   namespace JSX {
     // tslint:disable no-empty-interface
-    type Element = VNode
+    interface Element extends VNode {}
     // tslint:disable no-empty-interface
-    type ElementClass = Vue
+    interface ElementClass extends Vue {}
     interface IntrinsicElements {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      [elem: string]: any
+      [elem: string]: any;
     }
   }
 }

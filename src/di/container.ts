@@ -1,9 +1,10 @@
-import { GetRepoController, AppService } from "@/controller/repo_controller"
-import Axios from "axios"
+import { GitHubHttp, AppGitHubService } from "@/service"
+import { AppRepoController } from "@/controller"
 
 export enum Dependency {
   RepoController = "RepoController",
-  AppService = "AppService"
+  GitHubService = "GitHubService",
+  GitHubHttp = "GitHubHttp"
 }
 
 class DiContainer {
@@ -25,10 +26,12 @@ class DiContainer {
     }
 
     switch (dependency) {
-      case Dependency.AppService:
-        return (new AppService(Axios.create()) as unknown) as T
+      case Dependency.GitHubHttp:
+        return (new GitHubHttp() as unknown) as T
+      case Dependency.GitHubService:
+        return (new AppGitHubService(this.inject(Dependency.GitHubHttp)) as unknown) as T
       case Dependency.RepoController:
-        return (new GetRepoController(this.inject(Dependency.AppService)) as unknown) as T
+        return (new AppRepoController(this.inject(Dependency.GitHubService)) as unknown) as T
     }
   }
 }
