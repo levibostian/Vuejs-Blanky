@@ -1,5 +1,5 @@
 <template lang="pug">
-  #id="Repos"
+  #Repos
     .br3.pa3.mv3(v-for="(repo, index) in repos" :key="repo.id" :style="{'background-color':getRainbowColor(index)}")
       RepoItem(:repo="repo")
 </template>

@@ -17,5 +17,5 @@ export const Env: Environment = {
   If you need a `number` type, use `parseInt(getEnv("BRUTEFORCE_FREE_RETRIES"))`
   */
   baseUrl: getEnv("BASE_URL"),
-  development: getEnv("DEVELOPMENT") === "true"
+  development: getEnv("VUE_APP_DEVELOPMENT") === "true"
 }
