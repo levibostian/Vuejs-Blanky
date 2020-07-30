@@ -11,6 +11,7 @@ module.exports = {
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
+    "plugin:promise/recommended",
     "@foundersclubsoftware/eslint-config-web",    
     "@vue/prettier",
     "@vue/prettier/@typescript-eslint",
