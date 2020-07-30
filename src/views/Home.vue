@@ -14,9 +14,9 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator"
-import { RepoController } from "@/controller/repo_controller"
+import { RepoController } from "@/controller"
 import Repos from "@/components/Repos.vue"
-import { Di, Dependency } from "@/service/container"
+import { Di, Dependency } from "@/di"
 import { Repo } from "@/type"
 import * as Result from "@/type/result"
 

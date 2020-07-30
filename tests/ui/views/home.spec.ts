@@ -1,6 +1,6 @@
 import Home from "@/views/Home.vue"
 import { mount, shallowMount, Wrapper } from "@vue/test-utils"
-import { Di, Dependency } from "@/di/container"
+import { Di, Dependency } from "@/di"
 import flushpromises from "flush-promises"
 import { RepoControllerMock } from "../../mocks"
 import Repos from "@/components/Repos.vue"
